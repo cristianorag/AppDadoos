@@ -5,12 +5,12 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal.shade700,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Center(
-            child: Text('Dadoos')
+            child: Text('DOBLE')
           ),
-          backgroundColor: Colors.teal.shade900,
+          backgroundColor: Colors.blueAccent,
         ),
         body: Dadoos(),
       ),
