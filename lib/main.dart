@@ -21,6 +21,8 @@ void main() {
 class Dadoos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    var  numeroDadoEsquerda = 4;
     return Center(
       child: Row(
         children: [
@@ -29,7 +31,7 @@ class Dadoos extends StatelessWidget {
               onPressed: (){
                 print('Botão esquerdo pressionado');
               },
-                child: Image.asset('imagens/dado1.png'),
+                child: Image.asset('imagens/dado$numeroDadoEsquerda.png'),
             ),
            ),
 
