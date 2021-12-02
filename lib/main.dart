@@ -28,6 +28,14 @@ class Dadoos extends StatefulWidget {
 class _DadoosState extends State<Dadoos> {
   int numeroDadoEsquerda = 4;
   int numeroDadoDireita = 3;
+
+  void alterarFaceDados(){
+    setState(() {
+      numeroDadoEsquerda = Random().nextInt(6) +1;
+      numeroDadoDireita = Random().nextInt(6) +1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -36,10 +44,7 @@ class _DadoosState extends State<Dadoos> {
           Expanded(
             child: TextButton(
               onPressed: (){
-                setState(() {
-                  numeroDadoEsquerda = Random().nextInt(6) +1;
-                  print('Número do dado = $numeroDadoEsquerda');
-                });
+                alterarFaceDados();
               },
               child: Image.asset('imagens/dado$numeroDadoEsquerda.png'),
             ),
@@ -48,10 +53,7 @@ class _DadoosState extends State<Dadoos> {
           Expanded(
             child: TextButton(
               onPressed: (){
-                setState(() {
-                    numeroDadoDireita = Random().nextInt(6)+1;
-                    print('Número do dado = $numeroDadoDireita');
-                });
+                alterarFaceDados();
               },
               child: Image.asset('imagens/dado$numeroDadoDireita.png'),
             ),
